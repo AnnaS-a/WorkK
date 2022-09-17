@@ -25,3 +25,29 @@ void PrintArray(object[] array)
     Console.Write("] -> ");
 }
 
+void SelectArray(string[] arr, int d)
+{
+    string[] temp = new string[d];
+    int j = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= d)
+        {
+            temp[j] = arr[i];
+            j++;
+        }
+    }
+
+    string[] arr2 = new string[j]; // массив c нужным кол-вом элементов
+
+    for (int i = 0; i < j; i++)
+    {
+        arr2[i] = temp[i];
+    }
+    Console.Write("[");
+    foreach (string s in arr2)
+    {
+        Console.Write(s + " ");
+    }
+    Console.Write("]");
+}
