@@ -51,3 +51,7 @@ void SelectArray(string[] arr, int d)
     }
     Console.Write("]");
 }
+
+string[] ar = GetArray(4);
+PrintArray(ar);
+SelectArray(ar, 3);
